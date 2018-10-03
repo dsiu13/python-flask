@@ -1,1 +1,1 @@
-FLASK_APP=mircoblod.py
+FLASK_APP=mircoblog.py
