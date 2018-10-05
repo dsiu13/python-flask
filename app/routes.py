@@ -2,46 +2,24 @@ from flask import render_template, flash, redirect, url_for, request
 from flask_login import login_user, logout_user, current_user, login_required, LoginManager
 from werkzeug.urls import url_parse
 from app import app, db
-from app.forms import LoginForm, RegistrationForm, EditProfileForm
-from app.models import User
+from app.forms import LoginForm, RegistrationForm, EditProfileForm, PostForm
+from app.models import User, Post
 from datetime import datetime
 
-@app.route('/')
-@app.route('/index')
+@app.route('/', methods=['GET', 'POST'])
+@app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
-    posts = [
-        {
-            'author': {'username': 'Troy'},
-            'body': "I give this year a 'D', for delightful!"
-        },
-        {
-            'author': {'username': 'Abed'},
-            'body': 'Six Seasons and a Movie!'
-        },
-        {
-            'author': {'username': 'Jeff'},
-            'body': 'Doing more than the minimum amount of work is my definition of failing.'
-        },
-        {
-            'author': {'username': 'Annie'},
-            'body': 'That was a game. This is paintball.'
-        },
-        {
-            'author': {'username': 'Britta'},
-            'body': "The perfect Jeff Winger blow-off class: a class that doesn't exist."
-        },
-        {
-            'author': {'username': 'Shirley'},
-            'body': "Kind people are always kind, not just when it's easy."
-        },
-        {
-            'author': {'username': 'Pierce'},
-            'body': "When we seek to destroy others, we often hurt ourselves, because it's the self that wants to be destroyed."
-        }
-    ]
+    form = PostForm()
+    if form.validate_on_submit():
+        post = Post(body=form.post.data, author=current_user)
+        db.session.add(post)
+        db.session.commit()
+        flash('Posted!')
+        return redirect(url_for('index'))
+    posts = current_user.followed_posts().all()
+    return render_template("index.html", title='Home Page', form=form, posts=posts)
     return render_template('index.html', title='Home', posts=posts)
-
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -140,3 +118,9 @@ def unfollow(username):
     db.session.commit()
     flash('You are not following {}.'.format(username))
     return redirect(url_for('user', username=username))
+
+@app.route('/explore')
+@login_required
+def explore():
+    posts = Post.query.order_by(Post.timestamp.desc()).all()
+    return render_template('index.html', title='Explore', posts=posts)
