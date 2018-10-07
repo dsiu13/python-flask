@@ -3,7 +3,7 @@ from app import db, login
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 from hashlib import md5
-import time from time
+from time import time
 import jwt
 
 followers = db.Table('followers',
