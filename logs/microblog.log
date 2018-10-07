@@ -3,3 +3,90 @@
 2018-10-07 14:26:03,904 INFO: Microblog startup [in /Users/derek/git/python-flask/app/__init__.py:47]
 2018-10-07 14:27:26,792 INFO: Microblog startup [in /Users/derek/git/python-flask/app/__init__.py:47]
 2018-10-07 14:27:43,261 INFO: Microblog startup [in /Users/derek/git/python-flask/app/__init__.py:47]
+2018-10-07 14:29:21,672 INFO: Microblog startup [in /Users/derek/git/python-flask/app/__init__.py:47]
+2018-10-07 14:30:34,474 INFO: Microblog startup [in /Users/derek/git/python-flask/app/__init__.py:47]
+2018-10-07 14:31:01,160 INFO: Microblog startup [in /Users/derek/git/python-flask/app/__init__.py:47]
+2018-10-07 14:36:01,415 INFO: Microblog startup [in /Users/derek/git/python-flask/app/__init__.py:47]
+2018-10-07 14:39:23,909 INFO: Microblog startup [in /Users/derek/git/python-flask/app/__init__.py:47]
+2018-10-07 14:39:42,792 INFO: Microblog startup [in /Users/derek/git/python-flask/app/__init__.py:47]
+2018-10-07 14:47:39,344 INFO: Microblog startup [in /Users/derek/git/python-flask/app/__init__.py:47]
+2018-10-07 15:26:38,071 INFO: Microblog startup [in /Users/derek/git/python-flask/app/__init__.py:47]
+2018-10-07 15:29:14,116 INFO: Microblog startup [in /Users/derek/git/python-flask/app/__init__.py:47]
+2018-10-07 15:30:54,462 INFO: Microblog startup [in /Users/derek/git/python-flask/app/__init__.py:47]
+2018-10-07 15:34:23,581 INFO: Microblog startup [in /Users/derek/git/python-flask/app/__init__.py:47]
+2018-10-07 15:34:35,609 ERROR: Exception on / [GET] [in /Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/derek/git/python-flask/app/routes.py", line 31, in index
+    page, app.config['POSTS_PER_PAGE'], False)
+KeyError: 'POSTS_PER_PAGE'
+2018-10-07 15:34:43,069 ERROR: Exception on /index [GET] [in /Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/derek/git/python-flask/app/routes.py", line 31, in index
+    page, app.config['POSTS_PER_PAGE'], False)
+KeyError: 'POSTS_PER_PAGE'
+2018-10-07 15:34:44,962 ERROR: Exception on /index [GET] [in /Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/derek/git/python-flask/app/routes.py", line 31, in index
+    page, app.config['POSTS_PER_PAGE'], False)
+KeyError: 'POSTS_PER_PAGE'
+2018-10-07 15:35:07,597 ERROR: Exception on /index [GET] [in /Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/derek/git/python-flask/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/derek/git/python-flask/app/routes.py", line 31, in index
+    page, app.config['POSTS_PER_PAGE'], False)
+KeyError: 'POSTS_PER_PAGE'
