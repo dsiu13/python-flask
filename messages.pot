@@ -1,14 +1,14 @@
 # Translations template for PROJECT.
-# Copyright (C) 2018 ORGANIZATION
+# Copyright (C) 2019 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-11-08 12:49-0800\n"
+"POT-Creation-Date: 2019-03-18 10:54-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,16 +17,64 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
+#: app/__init__.py:21
+msgid "Please log in to access this page."
+msgstr ""
+
 #: app/email.py:20
 msgid "[Microblog] Reset Your Password"
 msgstr ""
 
-#: app/forms.py:29
+#: app/forms.py:11 app/forms.py:18 app/forms.py:49
+msgid "Username"
+msgstr ""
+
+#: app/forms.py:12 app/forms.py:20 app/forms.py:42
+msgid "Password"
+msgstr ""
+
+#: app/forms.py:13
+msgid "Remember Me"
+msgstr ""
+
+#: app/forms.py:14 app/routes.py:70 app/templates/login.html:5
+msgid "Sign In"
+msgstr ""
+
+#: app/forms.py:19 app/forms.py:37
+msgid "Email"
+msgstr ""
+
+#: app/forms.py:22
+msgid "Repeat Password"
+msgstr ""
+
+#: app/forms.py:24 app/routes.py:90 app/templates/register.html:5
+msgid "Register"
+msgstr ""
+
+#: app/forms.py:29 app/forms.py:61
 msgid "Please use a different username."
 msgstr ""
 
 #: app/forms.py:34
 msgid "Please use a different email address."
+msgstr ""
+
+#: app/forms.py:38
+msgid "Request Password Reset"
+msgstr ""
+
+#: app/forms.py:50
+msgid "About me"
+msgstr ""
+
+#: app/forms.py:51 app/forms.py:66
+msgid "Submit"
+msgstr ""
+
+#: app/forms.py:65
+msgid "Say something"
 msgstr ""
 
 #: app/routes.py:28
@@ -41,12 +89,8 @@ msgstr ""
 msgid "Explore"
 msgstr ""
 
-#: app/routes.py:70 app/templates/login.html:5
-msgid "Sign In"
-msgstr ""
-
-#: app/routes.py:90 app/templates/register.html:5
-msgid "Register"
+#: app/routes.py:88
+msgid "Congratulations, you are now a registered user!"
 msgstr ""
 
 #: app/routes.py:102
